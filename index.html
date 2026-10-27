@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#ffe4ee">
+<title>For Rishita 🌸</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff6fa;--blush:#ffd9e7;--pink:#ff8fb8;--rose:#e8478b;--berry:#7a1f4f;--sea:#36b7cb;--ink:#4a2036;--serif:'Fraunces',Georgia,serif;--hand:'Caveat','Segoe Script',cursive}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{height:100%;margin:0}
+body{font-family:var(--serif);color:var(--ink);background:var(--bg);overflow:hidden}
+button{font:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--sea);outline-offset:3px}
+h1,h2,p{margin:0}
+#fx{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:60}
+.fl{position:absolute;top:-8vh;animation:fall linear forwards;opacity:.8}
+@keyframes fall{to{transform:translateY(112vh) rotate(360deg)}}
+.sp{position:absolute;animation:pop .9s ease-out forwards;font-size:20px;transform:translate(-50%,-50%)}
+@keyframes pop{to{opacity:0;transform:translate(-50%,-120%) scale(1.6)}}
+.scr{position:fixed;inset:0;display:none;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:max(20px,env(safe-area-inset-top)) 22px max(20px,env(safe-area-inset-bottom));z-index:5;background:radial-gradient(circle at 20% 10%,#ffe0ee,transparent 55%),radial-gradient(circle at 85% 90%,#ffeaf3,transparent 50%),var(--bg)}
+.scr.on{display:flex;animation:pgin .6s ease}
+@keyframes pgin{from{opacity:0;transform:translateY(14px)}}
+.btn{border:0;border-radius:999px;padding:14px 30px;color:#fff;font-weight:600;font-size:1.05rem;background:linear-gradient(135deg,var(--pink),var(--rose));box-shadow:0 8px 22px #e8478b55;transition:transform .2s}
+.btn:hover{transform:translateY(-2px) scale(1.03)}.btn:active{transform:scale(.96)}
+.btn.ghost{background:#fff;color:var(--rose);box-shadow:0 4px 14px #e8478b33}
+.card{background:#ffffffcc;backdrop-filter:blur(8px);border-radius:28px;padding:30px 24px;width:min(92vw,380px);box-shadow:0 18px 50px #e8478b30;border:1px solid #fff}
+#pw{width:100%;text-align:center;font-size:1.8rem;letter-spacing:.5em;padding:12px 6px 12px 18px;border:2px solid var(--blush);border-radius:18px;background:#fff;color:var(--berry);margin:16px 0;font-family:inherit}
+#pw:focus{border-color:var(--pink);outline:none}
+#err{min-height:1.4em;color:var(--rose);font-size:.95rem;margin:0 0 10px}
+.shake{animation:shake .45s}
+@keyframes shake{20%,60%{transform:translateX(-9px)}40%,80%{transform:translateX(9px)}}
+#heart{font-size:min(46vw,190px);background:none;border:0;line-height:1;filter:drop-shadow(0 10px 20px #e8478b66);transition:transform .15s;animation:beat 1.3s infinite}
+#heart:active{transform:scale(.88)}
+@keyframes beat{50%{scale:1.07}}
+#msg{font-family:var(--hand);font-size:clamp(1.7rem,6vw,2.3rem);color:var(--berry);min-height:2.4em;margin:6px 0}
+.dots{display:flex;gap:6px;flex-wrap:wrap;justify-content:center;max-width:300px}
+.dots i{width:16px;height:16px;border-radius:50%;background:var(--blush);transition:.3s}
+.dots i.f{background:var(--rose);transform:scale(1.25)}
+/* ===== scrolling site ===== */
+#main{display:none;overflow-y:auto;overflow-x:hidden;padding:0;scroll-behavior:smooth;align-items:stretch;justify-content:flex-start;background:var(--bg)}
+#main.on{display:block}
+#bar{position:fixed;top:0;left:0;height:4px;width:0;background:linear-gradient(90deg,var(--pink),var(--rose),var(--sea));z-index:70;border-radius:0 4px 4px 0}
+.sec{min-height:100vh;min-height:100dvh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:70px 24px;position:relative;overflow:hidden}
+.in{max-width:560px;width:100%}
+.s1{background:radial-gradient(circle at 50% 30%,#ffd9e7,transparent 60%),var(--bg)}
+.s2{background:linear-gradient(#fff6fa,#ffe3ee)}
+.s3{background:linear-gradient(#ffe3ee,#e3fafd 40%,#aeeaf2);color:#0f4258}
+.s4{background:linear-gradient(#aeeaf2,#fff6fa)}
+.s5{background:#fff1f6}
+.s6{background:linear-gradient(#fff1f6,#ffd9e7)}
+.s7{background:radial-gradient(circle at 50% 40%,#ffc2da,#ffe3ee 70%)}
+h2.t{font-size:clamp(2rem,8vw,3.2rem);font-style:italic;font-weight:600;color:var(--berry);line-height:1.15;margin-bottom:14px}
+.s3 h2.t{color:#0f4258}
+p.lead{font-size:clamp(1.05rem,3.8vw,1.3rem);line-height:1.7;max-width:30em;margin:0 auto}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s ease;transition-delay:calc(var(--i,0)*.18s)}
+.rv.in{opacity:1;transform:none}
+.name{font-size:clamp(3.4rem,18vw,7rem);font-style:italic;font-weight:600;color:var(--berry);line-height:1;position:relative}
+.pretty{font-family:var(--hand);font-weight:700;font-size:clamp(2rem,8vw,3rem);margin-top:10px;background:linear-gradient(90deg,var(--rose),var(--pink),var(--sea),var(--rose));background-size:250%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 5s linear infinite}
+@keyframes shine{to{background-position:250%}}
+.bloom{position:absolute;width:min(120vw,620px);opacity:.5;animation:spin 40s linear infinite;z-index:0}
+.s1 .in{position:relative;z-index:1}
+@keyframes spin{to{transform:rotate(360deg)}}
+.cue{position:absolute;bottom:26px;left:0;right:0;font-family:var(--hand);font-size:1.5rem;color:var(--rose);animation:bob 1.8s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(8px)}}
+.big{width:min(80vw,320px);margin:0 auto 22px;display:block}
+.sm{fill:none;stroke:var(--rose);stroke-width:6;stroke-linecap:round;stroke-dasharray:130;animation:draw 3s ease-in-out infinite}
+@keyframes draw{0%{stroke-dashoffset:130}55%,100%{stroke-dashoffset:0}}
+.wv{animation:wave 3s linear infinite}
+@keyframes wave{to{transform:translateX(-60px)}}
+.shn{animation:glint 3s ease-in-out infinite}
+@keyframes glint{0%,100%{opacity:.3}50%{opacity:1}}
+.hand{font-family:var(--hand);font-weight:700;font-size:clamp(1.9rem,7vw,2.6rem);color:var(--rose);line-height:1.2}
+.paper{background:#fffdf8 repeating-linear-gradient(transparent 0 35px,#f6d3e2 35px 36px);border-radius:10px;padding:26px 22px;text-align:left;box-shadow:0 14px 40px #e8478b30;transform:rotate(-.6deg);font-family:var(--hand);font-size:clamp(1.35rem,4.6vw,1.65rem);line-height:36px;color:#5a2a44;position:relative;max-width:560px;width:100%}
+.paper::before{content:"💗";position:absolute;right:-6px;top:-16px;font-size:2rem;transform:rotate(14deg)}
+.paper p{margin:0 0 36px}.sig{text-align:right;font-size:1.9em}
+.wg{display:grid;gap:14px;margin-top:22px;grid-template-columns:1fr}
+.wc{background:#fff;border-radius:22px;padding:20px 18px;box-shadow:0 8px 22px #e8478b22;line-height:1.55}
+.wc b{display:block;font-size:1.8rem;margin-bottom:4px}
+@media(min-width:700px){.wg{grid-template-columns:1fr 1fr}.in.wide{max-width:720px}}
+#gift{font-size:6rem;background:none;border:0;animation:beat 1.2s infinite}
+#reveal{display:none}#reveal.on{display:block;animation:pgin .9s ease}
+.row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:22px}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div id="fx"></div>
+
+<section class="scr on" id="intro">
+  <button class="btn" style="font-size:1.3rem;padding:18px 44px" data-s="lock">Begin ✨</button>
+</section>
+
+<section class="scr" id="lock">
+  <div class="card">
+    <div style="font-size:2.6rem">🔐</div>
+    <h2 style="font-size:1.6rem;margin:6px 0">A gift for Rishita</h2>
+    <p>Enter the 6-digit password to open it.</p>
+    <input id="pw" type="password" inputmode="numeric" pattern="[0-9]*" maxlength="6" autocomplete="off" aria-label="Password">
+    <p id="err" role="alert"></p>
+    <button class="btn" id="unlock">Unlock 💗</button>
+  </div>
+</section>
+
+<section class="scr" id="surprise">
+  <p style="font-family:var(--hand);font-weight:700;font-size:1.6rem;color:var(--rose)">Tap the heart 12 times</p>
+  <button id="heart" aria-label="Tap the heart">💗</button>
+  <div id="msg" aria-live="polite">Hi Rishita 🌸</div>
+  <div class="dots" id="dots"></div>
+</section>
+
+<main class="scr" id="main">
+  <div id="bar"></div>
+
+  <!-- 1 Welcome -->
+  <section class="sec s1">
+    <svg class="bloom" viewBox="-100 -100 200 200" aria-hidden="true"><g fill="#ffb3cf">
+      <ellipse cy="-55" rx="26" ry="45"/><ellipse cy="-55" rx="26" ry="45" transform="rotate(45)"/><ellipse cy="-55" rx="26" ry="45" transform="rotate(90)"/><ellipse cy="-55" rx="26" ry="45" transform="rotate(135)"/><ellipse cy="-55" rx="26" ry="45" transform="rotate(180)"/><ellipse cy="-55" rx="26" ry="45" transform="rotate(225)"/><ellipse cy="-55" rx="26" ry="45" transform="rotate(270)"/><ellipse cy="-55" rx="26" ry="45" transform="rotate(315)"/></g><circle r="22" fill="#ffd36b"/></svg>
+    <div class="in">
+      <p class="lead rv" style="margin-bottom:10px">Welcome,</p>
+      <h1 class="name rv" style="--i:1">Rishita</h1>
+      <div class="pretty rv" style="--i:2">The Prettiest Girl in the World</div>
+    </div>
+    <div class="cue">scroll down ↓</div>
+  </section>
+
+  <!-- 2 Smile -->
+  <section class="sec s2"><div class="in">
+    <svg class="big rv" viewBox="0 0 200 120" aria-hidden="true"><ellipse cx="40" cy="62" rx="22" ry="12" fill="#ff8fb8" opacity=".4"/><ellipse cx="160" cy="62" rx="22" ry="12" fill="#ff8fb8" opacity=".4"/><path class="sm" d="M45 48Q100 120 155 48"/><circle cx="72" cy="22" r="4" fill="#ffd36b" class="shn"/><circle cx="135" cy="14" r="3" fill="#ffd36b" class="shn" style="animation-delay:1s"/></svg>
+    <h2 class="t rv" style="--i:1">Her beautiful smile</h2>
+    <p class="lead rv" style="--i:2">The kind of smile that makes an ordinary day feel lighter.</p>
+  </div></section>
+
+  <!-- 3 Eyes -->
+  <section class="sec s3"><div class="in">
+    <svg class="big rv" viewBox="0 0 220 110" aria-hidden="true"><defs><clipPath id="ce"><path d="M10 55Q55 5 100 55Q55 105 10 55Z"/><path d="M120 55Q165 5 210 55Q165 105 120 55Z"/></clipPath></defs>
+      <path d="M10 55Q55 5 100 55Q55 105 10 55Z" fill="#fff" stroke="#14527a" stroke-width="3"/><path d="M120 55Q165 5 210 55Q165 105 120 55Z" fill="#fff" stroke="#14527a" stroke-width="3"/>
+      <g clip-path="url(#ce)"><rect width="220" height="110" fill="#7fdbe8"/><path class="wv" d="M-60 60q15-14 30 0t30 0 30 0 30 0 30 0 30 0 30 0 30 0 30 0 30 0V120H-60z" fill="#2fb5c9"/><path class="wv" style="animation-duration:5s" d="M-60 74q15-12 30 0t30 0 30 0 30 0 30 0 30 0 30 0 30 0 30 0 30 0V120H-60z" fill="#14527a" opacity=".6"/></g>
+      <circle class="shn" cx="40" cy="38" r="4" fill="#fff"/><circle class="shn" cx="150" cy="38" r="4" fill="#fff" style="animation-delay:1s"/></svg>
+    <h2 class="t rv" style="--i:1">Her ocean-like eyes</h2>
+    <p class="lead rv" style="--i:2">Calm, deep, and very hard to look away from.</p>
+  </div></section>
+
+  <!-- 4 Made for you -->
+  <section class="sec s4"><div class="in">
+    <div class="hand rv">Made for you</div>
+    <p class="lead rv" style="--i:1;margin-top:14px">I'm a developer, so instead of just saying it, I built you something. Every line of this page was written with you in mind.</p>
+    <p class="hand rv" style="--i:2;margin-top:18px;font-size:1.8rem">— Debraj 🌸</p>
+  </div></section>
+
+  <!-- 5 Letter -->
+  <section class="sec s5"><div class="in" style="display:flex;flex-direction:column;align-items:center">
+    <h2 class="t rv">A Letter for You</h2>
+    <div class="paper rv" style="margin-top:12px">
+      <p class="rv" style="--i:0">Dear Rishita,</p>
+      <p class="rv" style="--i:1">I'm not great at saying big things out loud, so I did what I know how to do. I built something.</p>
+      <p class="rv" style="--i:1">You are the prettiest girl in the world. That's how it looks from where I stand, and I wanted you to hear it plainly. Your smile makes everything feel lighter, and your eyes remind me of the ocean: calm, deep, and hard to look away from.</p>
+      <p class="rv" style="--i:1">I didn't want to fill this letter with memories that aren't real, or with words that decide things for you. So here is only what I truly know: I admire you, and I wanted to give you something made with my own hands.</p>
+      <p class="rv" style="--i:1">You don't owe me an answer. If this made you smile even for a second, every line of code was worth it.</p>
+      <p class="rv" style="--i:1">Thank you for being you.</p>
+      <p class="sig rv" style="--i:1">Debraj 💗</p>
+    </div>
+  </div></section>
+
+  <!-- 6 Wishes -->
+  <section class="sec s6"><div class="in wide">
+    <h2 class="t rv">Little wishes for you</h2>
+    <div class="wg">
+      <div class="wc rv"><b>😊</b>May your smile always find a reason.</div>
+      <div class="wc rv" style="--i:1"><b>🌊</b>May calm, ocean-deep days always find you.</div>
+      <div class="wc rv"><b>🌷</b>May every dream of yours bloom.</div>
+      <div class="wc rv" style="--i:1"><b>✨</b>May you laugh more than you worry.</div>
+    </div>
+  </div></section>
+
+  <!-- 7 Final -->
+  <section class="sec s7"><div class="in">
+    <div id="pre"><button id="gift" aria-label="Open your gift">🎁</button><p class="hand">Tap to open your last gift</p></div>
+    <div id="reveal">
+      <div class="pretty">The Prettiest Girl in the World</div>
+      <h2 class="t" style="margin-top:16px">Keep smiling, Rishita.</h2>
+      <p class="lead">The world is a brighter place with that smile in it.<br>Made with love by Debraj 🌸</p>
+      <div class="row"><button class="btn" id="hearts">Shower of hearts 💗</button><button class="btn ghost" id="top">Back to top</button><button class="btn ghost" id="again">Start over</button></div>
+    </div>
+  </div></section>
+</main>
+
+<script>
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const PASS='120411',fx=$('#fx'),main=$('#main');
+function show(id){$$('.scr').forEach(s=>s.classList.toggle('on',s.id===id))}
+function spark(x,y){const e=document.createElement('span');e.className='sp';e.textContent='✨';e.style.left=x+'px';e.style.top=y+'px';fx.appendChild(e);setTimeout(()=>e.remove(),900)}
+function rain(n=30,set=['💗','🌸','✨','💖','🌷']){for(let i=0;i<n;i++){const e=document.createElement('span');e.className='fl';e.textContent=set[i%set.length];e.style.left=Math.random()*100+'vw';e.style.fontSize=14+Math.random()*20+'px';const d=4+Math.random()*5;e.style.animationDuration=d+'s';e.style.animationDelay=Math.random()*1.5+'s';fx.appendChild(e);setTimeout(()=>e.remove(),(d+2)*1000)}}
+document.addEventListener('pointerdown',e=>{if(e.target.closest('button'))spark(e.clientX,e.clientY)});
+setInterval(()=>rain(1),2000);
+document.querySelectorAll('[data-s]').forEach(b=>b.onclick=()=>show(b.dataset.s));
+
+function tryPw(){if($('#pw').value.trim()===PASS){$('#err').textContent='';show('surprise');rain(18)}else{$('#err').textContent='That password isn\u2019t right. Check the 6 digits and try again.';const c=$('#lock .card');c.classList.remove('shake');void c.offsetWidth;c.classList.add('shake');$('#pw').select()}}
+$('#unlock').onclick=tryPw;$('#pw').addEventListener('keydown',e=>{if(e.key==='Enter')tryPw()});
+new MutationObserver(()=>{if($('#lock').classList.contains('on'))setTimeout(()=>$('#pw').focus(),300)}).observe($('#lock'),{attributes:true});
+
+const lines=['Hi Rishita 🌸','Keep tapping, it\u2019s worth it','Something is blooming…','Debraj made this for you','Watering the flowers 💧','Halfway there!','Sprinkling sparkles ✨','Folding a little letter 💌','Wrapping a gift 🎁','Just 3 more…','2 more…','Last tap!'];
+let clicks=0;const dots=$('#dots');
+for(let i=0;i<12;i++)dots.appendChild(document.createElement('i'));
+$('#heart').onclick=()=>{clicks++;dots.children[clicks-1].classList.add('f');$('#msg').textContent=lines[Math.min(clicks,11)];$('#heart').style.fontSize=`min(${46+clicks*1.2}vw,${190+clicks*4}px)`;rain(3,['💗','🌸','✨']);
+  if(clicks>=12){rain(60);setTimeout(()=>{show('main');main.style.scrollBehavior='auto';main.scrollTop=0;main.style.scrollBehavior='';watch()},900)}};
+
+/* scroll reveal + progress bar */
+let io;function watch(){io&&io.disconnect();io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{root:main,threshold:.2});$$('.rv').forEach(el=>{el.classList.remove('in');io.observe(el)})}
+main.addEventListener('scroll',()=>{$('#bar').style.width=main.scrollTop/(main.scrollHeight-main.clientHeight||1)*100+'%'});
+
+$('#gift').onclick=()=>{$('#pre').style.display='none';$('#reveal').classList.add('on');rain(70)};
+$('#hearts').onclick=()=>rain(50);
+$('#top').onclick=()=>main.scrollTo({top:0,behavior:'smooth'});
+$('#again').onclick=()=>{clicks=0;$$('#dots i').forEach(i=>i.classList.remove('f'));$('#msg').textContent=lines[0];$('#heart').style.fontSize='';$('#pw').value='';$('#pre').style.display='';$('#reveal').classList.remove('on');show('intro')};
+</script>
+</body>
+</html>
